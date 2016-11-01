@@ -59,7 +59,6 @@ public class UsageCounter {
         List<String> stats = new ArrayList<>();
         List<String> usernames = new ArrayList<>(jedisConnection.zrange(dailyPrefix(), 0, -1));
 
-//        stats.add("*Hourly Stats Update*");
         Collections.reverse(usernames);
 
         Iterator<String> iterator = usernames.iterator();
