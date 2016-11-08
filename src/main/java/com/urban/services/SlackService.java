@@ -29,7 +29,7 @@ public class SlackService {
                 } else if (messageContent.equals(statsCommand)) {
                     StatsReplyCommand statsReplyCommand = new StatsReplyCommand(botChannel, botCommand);
                     statsReplyCommand.processCommand(slackMessagePosted, slackSession);
-                } else if (isAdminCommand(slackSession, slackMessagePosted)) {
+                } else if (isAdminCommand(slackMessagePosted)) {
                     AdminCommand adminCommand = new AdminCommand(botChannel, botCommand);
                     adminCommand.processCommand(slackMessagePosted, slackSession);
                 } else {
@@ -39,10 +39,10 @@ public class SlackService {
             }
 
             boolean isValidCommand(SlackSession slackSession, SlackMessagePosted slackMessagePosted) {
-                return isAdminCommand(slackSession, slackMessagePosted) || (notMessagePoster(slackSession, slackMessagePosted) && isListenerChannel(slackMessagePosted));
+                return isAdminCommand(slackMessagePosted) || (notMessagePoster(slackSession, slackMessagePosted) && isListenerChannel(slackMessagePosted));
             }
 
-            boolean isAdminCommand(SlackSession slackSession, SlackMessagePosted slackMessagePosted) {
+            boolean isAdminCommand(SlackMessagePosted slackMessagePosted) {
                 String senderUsername = slackMessagePosted.getSender().getUserName();
                 Boolean isDirect = slackMessagePosted.getChannel().isDirect();
 
