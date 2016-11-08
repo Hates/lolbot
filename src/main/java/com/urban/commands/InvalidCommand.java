@@ -7,7 +7,7 @@ import com.urban.commands.penalties.RemoveUsageAndTimeoutPenalty;
 import com.urban.commands.penalties.RemoveUsagePenalty;
 import com.urban.usage.RedisUsageCounter;
 
-public class InvalidCommand extends BotCommand {
+public class InvalidCommand extends AbstractBotCommand {
     private RedisUsageCounter counter = new RedisUsageCounter();
     private RemoveUsagePenalty penalty = new RemoveUsageAndTimeoutPenalty();
 

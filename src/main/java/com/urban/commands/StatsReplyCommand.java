@@ -5,7 +5,7 @@ import com.ullink.slack.simpleslackapi.SlackSession;
 import com.ullink.slack.simpleslackapi.events.SlackMessagePosted;
 import com.urban.usage.RedisUsageCounter;
 
-public class StatsReplyCommand extends BotCommand {
+public class StatsReplyCommand extends AbstractBotCommand {
     public StatsReplyCommand(String botChannel, String botCommand) {
         super(botChannel, botCommand);
     }
