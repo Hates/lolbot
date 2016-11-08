@@ -1,12 +1,12 @@
-package com.urban.service;
+package com.urban.services;
 
 import com.ullink.slack.simpleslackapi.SlackSession;
 import com.ullink.slack.simpleslackapi.events.SlackMessagePosted;
 import com.ullink.slack.simpleslackapi.listeners.SlackMessagePostedListener;
-import com.urban.command.AdminCommand;
-import com.urban.command.InvalidCommand;
-import com.urban.command.ReplyCommand;
-import com.urban.command.StatsReplyCommand;
+import com.urban.commands.AdminCommand;
+import com.urban.commands.InvalidCommand;
+import com.urban.commands.ReplyCommand;
+import com.urban.commands.StatsReplyCommand;
 
 import org.springframework.stereotype.Component;
 

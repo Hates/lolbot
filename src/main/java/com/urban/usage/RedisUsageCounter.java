@@ -8,13 +8,13 @@ import java.util.List;
 
 import redis.clients.jedis.Jedis;
 
-public class UsageCounter {
+public class RedisUsageCounter {
 
     private static final Jedis jedisConnection = new Jedis("localhost");
     private static final String prefix = "lolbot";
     private static final int database = 10;
 
-    public UsageCounter() {
+    public RedisUsageCounter() {
         jedisConnection.select(database);
     }
 

@@ -1,4 +1,4 @@
-package com.urban.service;
+package com.urban.services;
 
 import com.ullink.slack.simpleslackapi.SlackSession;
 import com.ullink.slack.simpleslackapi.impl.SlackSessionFactory;

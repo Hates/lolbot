@@ -1,14 +1,14 @@
-package com.urban.command;
+package com.urban.commands;
 
 import com.ullink.slack.simpleslackapi.SlackChannel;
 import com.ullink.slack.simpleslackapi.SlackSession;
 import com.ullink.slack.simpleslackapi.events.SlackMessagePosted;
-import com.urban.command.penalty.RemoveUsageAndTimeoutPenalty;
-import com.urban.command.penalty.RemoveUsagePenalty;
-import com.urban.usage.UsageCounter;
+import com.urban.commands.penalties.RemoveUsageAndTimeoutPenalty;
+import com.urban.commands.penalties.RemoveUsagePenalty;
+import com.urban.usage.RedisUsageCounter;
 
 public class InvalidCommand extends BotCommand {
-    private UsageCounter counter = new UsageCounter();
+    private RedisUsageCounter counter = new RedisUsageCounter();
     private RemoveUsagePenalty penalty = new RemoveUsageAndTimeoutPenalty();
 
     public InvalidCommand(String botChannel, String botCommand) {

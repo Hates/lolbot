@@ -1,6 +1,6 @@
 package com.urban;
 
-import com.urban.service.BotService;
+import com.urban.services.BotService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

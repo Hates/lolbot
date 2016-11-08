@@ -1,9 +1,9 @@
-package com.urban.command;
+package com.urban.commands;
 
 import com.ullink.slack.simpleslackapi.SlackChannel;
 import com.ullink.slack.simpleslackapi.SlackSession;
 import com.ullink.slack.simpleslackapi.events.SlackMessagePosted;
-import com.urban.usage.UsageCounter;
+import com.urban.usage.RedisUsageCounter;
 
 public class ReplyCommand extends BotCommand {
     public ReplyCommand(String botChannel, String botCommand) {
@@ -20,7 +20,7 @@ public class ReplyCommand extends BotCommand {
             return;
         }
 
-        UsageCounter counter = new UsageCounter();
+        RedisUsageCounter counter = new RedisUsageCounter();
 
         if(counter.hasTimeout(username)) {
             System.out.println("User has a timeout: Returning");

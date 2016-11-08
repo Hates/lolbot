@@ -1,4 +1,4 @@
-package com.urban.command;
+package com.urban.commands;
 
 import com.ullink.slack.simpleslackapi.SlackSession;
 import com.ullink.slack.simpleslackapi.events.SlackMessagePosted;

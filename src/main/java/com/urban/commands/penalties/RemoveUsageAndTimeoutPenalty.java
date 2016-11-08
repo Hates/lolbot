@@ -1,6 +1,6 @@
-package com.urban.command.penalty;
+package com.urban.commands.penalties;
 
-import com.urban.usage.UsageCounter;
+import com.urban.usage.RedisUsageCounter;
 
 public class RemoveUsageAndTimeoutPenalty extends RemoveUsagePenalty {
 
@@ -12,7 +12,7 @@ public class RemoveUsageAndTimeoutPenalty extends RemoveUsagePenalty {
         return "Hey " + username + "! Only lols allowed!";
     }
 
-    public void addPenalty(UsageCounter counter, String username) {
+    public void addPenalty(RedisUsageCounter counter, String username) {
         counter.removeUsage(username);
         counter.storeTimeout(username);
     }
