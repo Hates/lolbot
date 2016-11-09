@@ -20,5 +20,6 @@ public class SlackBotApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(SlackBotApplication.class, args);
+
     }
 }
